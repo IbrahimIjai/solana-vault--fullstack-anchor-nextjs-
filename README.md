@@ -1,3 +1,5 @@
+<!-- https://solana.com/developers/guides/getstarted/how-to-create-a-token -->
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [
 `create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
