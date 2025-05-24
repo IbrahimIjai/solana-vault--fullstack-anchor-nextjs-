@@ -1,5 +1,10 @@
-import { DashboardFeature } from '@/components/dashboard/dashboard-feature'
+import { NftLanding } from '@/components/landing/nft-landing'
+import { NftLayout } from './layout-nft'
 
 export default function Home() {
-  return <DashboardFeature />
+  return (
+    <NftLayout>
+      <NftLanding />
+    </NftLayout>
+  )
 }

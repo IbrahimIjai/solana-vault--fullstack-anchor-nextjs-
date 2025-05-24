@@ -1,10 +1,10 @@
 import React from 'react'
 import { useWallet } from '@solana/wallet-adapter-react'
+import { toast } from 'sonner';
 import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Progress } from '@/components/ui/progress'
-import { toast } from 'sonner'
 import { Clock, Coins, CalendarDays } from 'lucide-react'
 import { formatDistanceToNow } from 'date-fns'
 import Link from 'next/link'
