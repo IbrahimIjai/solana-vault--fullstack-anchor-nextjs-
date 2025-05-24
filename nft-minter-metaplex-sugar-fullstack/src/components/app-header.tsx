@@ -44,7 +44,7 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-black/80 dark:bg-black/80 light:bg-white/80 backdrop-blur-md py-3' 
+          ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md py-3' 
           : 'bg-transparent py-5'
       }`}
     >
@@ -55,11 +55,11 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
             <Link href="/" className="flex items-center space-x-2">
               <div className="relative w-10 h-10 overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg"></div>
-                <div className="absolute inset-0.5 bg-black dark:bg-black light:bg-white rounded-lg flex items-center justify-center">
+                <div className="absolute inset-0.5 bg-white dark:bg-black rounded-lg flex items-center justify-center">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 font-bold text-xl">B</span>
                 </div>
               </div>
-              <span className="font-bold text-xl text-white dark:text-white light:text-black">BoredApe<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">SOL</span></span>
+              <span className="font-bold text-xl text-black dark:text-white font-syne">BoredApe<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">SOL</span></span>
             </Link>
           </Button>
 
@@ -70,10 +70,10 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
                 key={link.path}
                 variant="ghost"
                 asChild
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors font-outfit ${
                   isActive(link.path)
-                    ? 'text-white bg-white/10 dark:text-white light:text-black light:bg-black/10'
-                    : 'text-gray-300 hover:text-white hover:bg-white/5 dark:text-gray-300 dark:hover:text-white light:text-gray-700 light:hover:text-black light:hover:bg-black/5'
+                    ? 'text-black bg-black/10 dark:text-white dark:bg-white/10'
+                    : 'text-gray-700 hover:text-black hover:bg-black/5 dark:text-gray-300 dark:hover:text-white dark:hover:bg-white/5'
                 }`}
               >
                 <Link href={link.path}>
@@ -94,7 +94,7 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
           <Button 
             variant="ghost" 
             size="icon" 
-            className="md:hidden text-white dark:text-white light:text-black"
+            className="md:hidden text-black dark:text-white"
             onClick={() => setShowMenu(!showMenu)}
           >
             {showMenu ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -104,7 +104,7 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
 
       {/* Mobile menu */}
       {showMenu && (
-        <div className="md:hidden fixed inset-x-0 top-[60px] bottom-0 bg-black/95 dark:bg-black/95 light:bg-white/95 backdrop-blur-md z-50">
+        <div className="md:hidden fixed inset-x-0 top-[60px] bottom-0 bg-white/95 dark:bg-black/95 backdrop-blur-md z-50">
           <div className="flex flex-col p-4 gap-4">
             <nav className="flex flex-col space-y-2">
               {links.map((link) => (
@@ -112,10 +112,10 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
                   key={link.path}
                   variant="ghost"
                   asChild
-                  className={`px-4 py-3 rounded-lg text-base font-medium justify-start ${
+                  className={`px-4 py-3 rounded-lg text-base font-medium justify-start font-outfit ${
                     isActive(link.path)
-                      ? 'text-white bg-white/10 dark:text-white light:text-black light:bg-black/10'
-                      : 'text-gray-300 hover:text-white hover:bg-white/5 dark:text-gray-300 dark:hover:text-white light:text-gray-700 light:hover:text-black light:hover:bg-black/5'
+                      ? 'text-black bg-black/10 dark:text-white dark:bg-white/10'
+                      : 'text-gray-700 hover:text-black hover:bg-black/5 dark:text-gray-300 dark:hover:text-white dark:hover:bg-white/5'
                   }`}
                   onClick={() => setShowMenu(false)}
                 >

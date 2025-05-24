@@ -3,6 +3,31 @@ import './globals.css'
 import { AppProviders } from '@/components/app-providers'
 import { AppLayout } from '@/components/app-layout'
 import React from 'react'
+import { Space_Grotesk, Syne, Outfit } from 'next/font/google'
+
+// Primary heading font - futuristic, bold for NFT titles and headings
+const syne = Syne({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-syne',
+  weight: ['400', '500', '600', '700', '800'],
+})
+
+// Body font - modern, clean and readable
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-outfit',
+  weight: ['300', '400', '500', '600', '700'],
+})
+
+// Monospace font for technical details, prices, wallet addresses
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-space-grotesk',
+  weight: ['300', '400', '500', '600', '700'],
+})
 
 export const metadata: Metadata = {
   title: 'BoredApeSOL | NFT Marketplace',
@@ -41,8 +66,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`antialiased`}>
+    <html lang="en" suppressHydrationWarning className={`${syne.variable} ${outfit.variable} ${spaceGrotesk.variable}`}>
+      <body className={`antialiased font-outfit`}>
         <AppProviders>
           {children}
         </AppProviders>
@@ -50,6 +75,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     </html>
   )
 }
+
 // Patch BigInt so we can log it using JSON.stringify without any errors
 declare global {
   interface BigInt {
