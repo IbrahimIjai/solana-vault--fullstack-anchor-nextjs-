@@ -1,5 +1,10 @@
 import CounterFeature from '@/components/counter/counter-feature'
+import { AppLayout } from '@/components/app-layout'
 
 export default function Page() {
-  return <CounterFeature />
+  return (
+    <AppLayout>
+      <CounterFeature />
+    </AppLayout>
+  )
 }

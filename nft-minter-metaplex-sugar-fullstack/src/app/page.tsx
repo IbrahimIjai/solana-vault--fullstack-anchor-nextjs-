@@ -1,10 +1,10 @@
 import { NftLanding } from '@/components/landing/nft-landing'
-import { NftLayout } from './layout-nft'
+import { AppLayout } from '@/components/app-layout'
 
 export default function Home() {
   return (
-    <NftLayout>
+    <AppLayout>
       <NftLanding />
-    </NftLayout>
+    </AppLayout>
   )
 }

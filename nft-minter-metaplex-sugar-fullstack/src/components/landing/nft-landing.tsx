@@ -114,42 +114,42 @@ export function NftHero() {
 
 export function NftFeatures() {
   return (
-    <div className="bg-neutral-100 dark:bg-neutral-900 py-16 md:py-24">
+    <div className="bg-neutral-100 dark:bg-neutral-900 light:bg-white py-12 sm:py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Our NFTs?</h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4">Why Our NFTs?</h2>
+          <p className="text-base sm:text-lg text-muted-foreground light:text-gray-600 max-w-2xl mx-auto">
             Unique digital collectibles with real utility and community benefits.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white dark:bg-neutral-800 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center mb-6">
-              <Sparkles className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <div className="bg-white dark:bg-neutral-800 light:bg-neutral-50 p-6 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-purple-100 dark:bg-purple-900/30 light:bg-purple-100 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+              <Sparkles className="h-5 w-5 sm:h-6 sm:w-6 text-purple-600 dark:text-purple-400 light:text-purple-600" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Exclusive Access</h3>
-            <p className="text-gray-600 dark:text-gray-400">
+            <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Exclusive Access</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 light:text-gray-600">
               NFT holders get exclusive access to events, drops, and community benefits.
             </p>
           </div>
           
-          <div className="bg-white dark:bg-neutral-800 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center mb-6">
-              <Zap className="h-6 w-6 text-blue-600 dark:text-blue-400" />
+          <div className="bg-white dark:bg-neutral-800 light:bg-neutral-50 p-6 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 dark:bg-blue-900/30 light:bg-blue-100 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+              <Zap className="h-5 w-5 sm:h-6 sm:w-6 text-blue-600 dark:text-blue-400 light:text-blue-600" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Low Gas Fees</h3>
-            <p className="text-gray-600 dark:text-gray-400">
+            <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Low Gas Fees</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 light:text-gray-600">
               Built on Solana for lightning-fast transactions and minimal gas fees.
             </p>
           </div>
           
-          <div className="bg-white dark:bg-neutral-800 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-12 h-12 bg-pink-100 dark:bg-pink-900/30 rounded-full flex items-center justify-center mb-6">
-              <Star className="h-6 w-6 text-pink-600 dark:text-pink-400" />
+          <div className="bg-white dark:bg-neutral-800 light:bg-neutral-50 p-6 sm:p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-pink-100 dark:bg-pink-900/30 light:bg-pink-100 rounded-full flex items-center justify-center mb-4 sm:mb-6">
+              <Star className="h-5 w-5 sm:h-6 sm:w-6 text-pink-600 dark:text-pink-400 light:text-pink-600" />
             </div>
-            <h3 className="text-xl font-bold mb-3">Community Rewards</h3>
-            <p className="text-gray-600 dark:text-gray-400">
+            <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3">Community Rewards</h3>
+            <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 light:text-gray-600">
               Earn rewards and participate in governance decisions as an NFT holder.
             </p>
           </div>
@@ -188,7 +188,7 @@ export function NftShowcase() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
           {featuredNfts.map((nft) => (
             <div
               key={nft.id}
@@ -231,7 +231,6 @@ export function NftShowcase() {
             </Link>
           </Button>
         </div>
-      </div>
       </div>
     </div>
   )

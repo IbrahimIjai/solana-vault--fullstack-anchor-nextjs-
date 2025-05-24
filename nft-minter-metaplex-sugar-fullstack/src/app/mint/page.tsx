@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { MinterCollection, NFTCollection } from '@/components/minter/minter-ui';
 import { Skeleton } from '@/components/ui/skeleton';
+import { AppLayout } from '@/components/app-layout';
 
 // Mock data for demonstration - replace with actual API calls
 const mockCollections: NFTCollection[] = [
@@ -83,33 +84,35 @@ export default function MintPage() {
   }, []);
 
   return (
-    <div className="container mx-auto py-8 px-4">
-      <div className="space-y-6">
-        <div>
-          <h1 className="text-3xl font-bold">NFT Collections</h1>
-          <p className="text-gray-500 dark:text-gray-400 mt-2">
-            Discover and mint from the latest NFT collections on Solana
-          </p>
-        </div>
-
-        {loading ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[...Array(4)].map((_, i) => (
-              <div key={i} className="space-y-4">
-                <Skeleton className="h-48 w-full rounded-lg" />
-                <div className="space-y-2">
-                  <Skeleton className="h-6 w-3/4" />
-                  <Skeleton className="h-4 w-full" />
-                  <Skeleton className="h-4 w-2/3" />
-                </div>
-                <Skeleton className="h-10 w-full" />
-              </div>
-            ))}
+    <AppLayout>
+      <div className="container mx-auto py-8 px-4">
+        <div className="space-y-6">
+          <div>
+            <h1 className="text-3xl font-bold">NFT Collections</h1>
+            <p className="text-gray-500 dark:text-gray-400 mt-2">
+              Discover and mint from the latest NFT collections on Solana
+            </p>
           </div>
-        ) : (
-          <MinterCollection collections={collections} />
-        )}
+
+          {loading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[...Array(4)].map((_, i) => (
+                <div key={i} className="space-y-4">
+                  <Skeleton className="h-48 w-full rounded-lg" />
+                  <div className="space-y-2">
+                    <Skeleton className="h-6 w-3/4" />
+                    <Skeleton className="h-4 w-full" />
+                    <Skeleton className="h-4 w-2/3" />
+                  </div>
+                  <Skeleton className="h-10 w-full" />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <MinterCollection collections={collections} />
+          )}
+        </div>
       </div>
-    </div>
+    </AppLayout>
   );
 }
