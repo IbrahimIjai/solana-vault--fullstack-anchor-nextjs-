@@ -1,3 +1,8 @@
+
+owner pubkey: "6t3yY8oi2uCupcKdbHeg1XeHCmjnnWVPfzMdSNhVMZfy"
+tresury pubkey: "B4JyhEsFj5JQsAbrUczjvAVvXofjoRo8CyivEhaHctqu"
+creator pubkey: "2RfdB9fFwdjNTCK1XAAiXuGzgZFhPQHTuCHWzUX2fFW9"
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [
 `create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
