@@ -8,6 +8,9 @@ import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Determine if we're running from the dist directory
+const isRunningFromDist = __dirname.includes('dist');
+
 interface NFTMetadata {
   name: string;
   description: string;
@@ -54,7 +57,10 @@ interface MetaplexMetadata {
 
 const BASE_URI = "ipfs://QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/";
 const IPFS_GATEWAY = "https://ipfs.io/ipfs/";
-const OUTPUT_DIR = path.join(__dirname, "assets");
+// Adjust the output directory based on where the script is running from
+const OUTPUT_DIR = isRunningFromDist 
+  ? path.join(process.cwd(), "assets") // Use current working directory when running from dist
+  : path.join(__dirname, "assets");
 const MAX_TOKENS = 20;
 
 // Create output directory if it doesn't exist
@@ -341,24 +347,41 @@ async function createMetaJson(
 ): Promise<void> {
   console.log("Creating Metaplex format JSON files...");
 
+  // Make sure the assets directory exists
+  const assetsDir = path.join(process.cwd(), "assets");
+  if (!fs.existsSync(assetsDir)) {
+    console.log(`Assets directory not found at ${assetsDir}. Creating it now...`);
+    fs.mkdirSync(assetsDir, { recursive: true });
+  }
+
   // Create collection metadata in Metaplex format
   await createMetaplexCollectionJson(walletAddress);
 
   // Process each NFT
   for (let i = 0; i < MAX_TOKENS; i++) {
     await createMetaplexNftJson(i, walletAddress);
+    // Add a small delay between requests to avoid rate limiting
+    if (i < MAX_TOKENS - 1) {
+      await new Promise(resolve => setTimeout(resolve, 500));
+    }
   }
 
   console.log("\nMetaplex JSON creation completed!");
-  console.log(
-    `Check the ${OUTPUT_DIR} folder for your Metaplex format JSON files.`
-  );
+  console.log(`Check the assets folder for your updated Metaplex format JSON files.`);
 }
 
 // Create Metaplex format JSON for a single NFT
 async function createMetaplexNftJson(index: number, walletAddress: string): Promise<void> {
   try {
     console.log(`Processing Metaplex JSON for NFT #${index}...`);
+    
+    // Path to the existing JSON file
+    const jsonPath = path.join(process.cwd(), "assets", `${index}.json`);
+    
+    // Check if the file exists
+    if (!fs.existsSync(jsonPath)) {
+      console.log(`  JSON file for #${index} not found at ${jsonPath}, will create a new one.`);
+    }
     
     // Fetch original metadata from IPFS
     const tokenId = index + 1; // BAYC tokens start at 1
@@ -367,9 +390,9 @@ async function createMetaplexNftJson(index: number, walletAddress: string): Prom
     
     try {
       originalMetadata = await fetchMetadata(metadataUrl);
-      console.log(`  Fetched original metadata for #${index}`);
+      console.log(`  Fetched original metadata for #${index} from IPFS`);
     } catch (error) {
-      console.error(`  Error fetching original metadata for #${index}:`, error);
+      console.error(`  Error fetching original metadata for #${index} from IPFS:`, error);
       // Create placeholder metadata if fetch fails
       originalMetadata = {
         name: `Bored Ape #${index}`,
@@ -384,7 +407,7 @@ async function createMetaplexNftJson(index: number, walletAddress: string): Prom
     }
     
     // Create Metaplex format metadata
-    const metaplexMetadata: MetaplexMetadata = {
+    const metaplexMetadata = {
       name: originalMetadata.name || `Bored Ape #${index}`,
       symbol: "BAYC",
       description: originalMetadata.description || "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs.",
@@ -413,11 +436,10 @@ async function createMetaplexNftJson(index: number, walletAddress: string): Prom
     };
     
     // Write to file
-    const jsonPath = path.join(OUTPUT_DIR, `${index}.json`);
     fs.writeFileSync(jsonPath, JSON.stringify(metaplexMetadata, null, 2));
-    console.log(`  Created Metaplex JSON for #${index}`);
+    console.log(`  Updated Metaplex JSON for #${index} at ${jsonPath}`);
   } catch (error) {
-    console.error(`Error creating Metaplex JSON for #${index}:`, error);
+    console.error(`Error creating/updating Metaplex JSON for #${index}:`, error);
   }
 }
 
@@ -426,10 +448,10 @@ async function createMetaplexCollectionJson(walletAddress: string): Promise<void
   try {
     console.log("Creating Metaplex collection JSON...");
     
-    const collectionJsonPath = path.join(OUTPUT_DIR, "collection.json");
+    const collectionJsonPath = path.join(process.cwd(), "assets", "collection.json");
     
     // Create Metaplex format collection metadata
-    const metaplexCollectionMetadata: MetaplexMetadata = {
+    const metaplexCollectionMetadata = {
       name: "Bored Ape Yacht Club Collection",
       symbol: "BAYC",
       description: "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain.",
@@ -455,7 +477,7 @@ async function createMetaplexCollectionJson(walletAddress: string): Promise<void
     
     // Write to file
     fs.writeFileSync(collectionJsonPath, JSON.stringify(metaplexCollectionMetadata, null, 2));
-    console.log("Created Metaplex collection JSON");
+    console.log(`Updated Metaplex collection JSON at ${collectionJsonPath}`);
   } catch (error) {
     console.error("Error creating Metaplex collection JSON:", error);
   }

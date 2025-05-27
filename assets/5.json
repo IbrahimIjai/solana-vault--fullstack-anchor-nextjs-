@@ -1,8 +1,48 @@
 {
-    "symbol": "BAYC",
-    "seller_fee_basis_points": 500,
-    "external_url": "https://boredapeyachtclub.com/",
-    "edition": "",
-    "background_color": "000000",
-    "image": "5.png"
+  "name": "Bored Ape #5",
+  "symbol": "BAYC",
+  "description": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs.",
+  "seller_fee_basis_points": 500,
+  "image": "5.png",
+  "attributes": [
+    {
+      "trait_type": "Clothes",
+      "value": "Tweed Suit"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Bored"
+    },
+    {
+      "trait_type": "Fur",
+      "value": "Cream"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Crazy"
+    },
+    {
+      "trait_type": "Background",
+      "value": "Yellow"
+    },
+    {
+      "trait_type": "Hat",
+      "value": "S&m Hat"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "5.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "6t3yY8oi2uCupcKdbHeg1XeHCmjnnWVPfzMdSNhVMZfy",
+        "share": 100
+      }
+    ]
+  }
 }
