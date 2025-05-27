@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:nfts": "npx tsc nft-utils/getnfts.ts --esModuleInterop --resolveJsonModule --target es2020 --module esnext --moduleResolution node --outDir dist",
     "get:nfts": "npm run build:nfts && node dist/nft-utils/getnfts.js",
-    "create:meta": "npm run build:nfts && node dist/nft-utils/getnfts.js --create-meta --wallet-address"
+    "create:meta": "npm run build:nfts && node dist/nft-utils/getnfts.js --create-meta 6t3yY8oi2uCupcKdbHeg1XeHCmjnnWVPfzMdSNhVMZfy"
   },
   "author": "",
   "license": "ISC",
