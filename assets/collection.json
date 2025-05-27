@@ -1,0 +1,10 @@
+{
+  "name": "Bored Ape Yacht Club Collection",
+  "symbol": "BAYC",
+  "description": "The Bored Ape Yacht Club is a collection of 10,000 unique Bored Ape NFTs— unique digital collectibles living on the Ethereum blockchain.",
+  "seller_fee_basis_points": 500,
+  "external_url": "https://boredapeyachtclub.com/",
+  "edition": "",
+  "background_color": "000000",
+  "image": "collection.png"
+}
