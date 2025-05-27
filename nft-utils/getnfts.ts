@@ -336,19 +336,23 @@ async function main(): Promise<void> {
 }
 
 // Create Metaplex format JSON files for all NFTs
-async function createMetaJson(walletAddress: string = "YOUR_WALLET_ADDRESS"): Promise<void> {
+async function createMetaJson(
+  walletAddress: string = "6t3yY8oi2uCupcKdbHeg1XeHCmjnnWVPfzMdSNhVMZfy"
+): Promise<void> {
   console.log("Creating Metaplex format JSON files...");
-  
+
   // Create collection metadata in Metaplex format
   await createMetaplexCollectionJson(walletAddress);
-  
+
   // Process each NFT
   for (let i = 0; i < MAX_TOKENS; i++) {
     await createMetaplexNftJson(i, walletAddress);
   }
-  
+
   console.log("\nMetaplex JSON creation completed!");
-  console.log(`Check the ${OUTPUT_DIR} folder for your Metaplex format JSON files.`);
+  console.log(
+    `Check the ${OUTPUT_DIR} folder for your Metaplex format JSON files.`
+  );
 }
 
 // Create Metaplex format JSON for a single NFT
