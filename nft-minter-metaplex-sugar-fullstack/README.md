@@ -8,6 +8,11 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [
 
 ## Getting Started
 
+Collection mint ID: CdHfRQuzqj7BjJrFvhihXNqkKu5iJdZPk9Ueo5uUnt5q
+Funding address:
+  -> pubkey: 6t3yY8oi2uCupcKdbHeg1XeHCmjnnWVPfzMdSNhVMZfy
+  -> lamports: 990010 (◎ 0.00099001)
+  
 First, run the development server:
 
 ```bash
