@@ -7,8 +7,8 @@
   "isSequential": true,
   "creators": [
     {
-      "address": "6t3yy8oi2ucupckdheg1xehcmjnnwvpfzmdsnhvmzfy",
-      "share": 40
+      "address": "6t3yY8oi2uCupcKdbHeg1XeHCmjnnWVPfzMdSNhVMZfy",
+      "share": 100
     }
   ],
   "uploadMethod": "bundlr",

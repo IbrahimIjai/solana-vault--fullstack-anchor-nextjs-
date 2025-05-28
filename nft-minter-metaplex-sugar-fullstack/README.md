@@ -3,42 +3,45 @@ owner pubkey: "6t3yY8oi2uCupcKdbHeg1XeHCmjnnWVPfzMdSNhVMZfy"
 tresury pubkey: "B4JyhEsFj5JQsAbrUczjvAVvXofjoRo8CyivEhaHctqu"
 creator pubkey: "2RfdB9fFwdjNTCK1XAAiXuGzgZFhPQHTuCHWzUX2fFW9"
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [
-`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Thi
 
-## Getting Started
 
-Collection mint ID: CdHfRQuzqj7BjJrFvhihXNqkKu5iJdZPk9Ueo5uUnt5q
-Funding address:
-  -> pubkey: 6t3yY8oi2uCupcKdbHeg1XeHCmjnnWVPfzMdSNhVMZfy
-  -> lamports: 990010 (◎ 0.00099001)
+## Depoloyment sugar
+
+Found 21 asset pair(s), uploading files:
++--------------------+
+| images    |      0 |
+| metadata  |      0 |
++--------------------+
+
+....no files need uploading, skipping remaining steps.
+
+21/21 asset pair(s) uploaded.
+
+>>> sugar deploy
+
+[1/2] 🍬 Loading candy machine
+Candy machine ID: 2Ri9qynLQ9F6xKSEgmcMMptbFra6JYRMdH19k7EFS8nc
+
+[2/2] 📝 Writing config lines
+
+All config lines deployed.
+
+>>> sugar verify
+
+[1/2] 🍬 Loading candy machine
+▪▪▪▪▪ Completed
+
+[2/2] 📝 Verification
+Verifying 20 config line(s): (Ctrl+C to abort)
+[00:00:01] Config line verification successful █████████████████████████████████████████████████████████████████████████ 20/20
+
+Verification successful. You're good to go!
+
+See your candy machine at:
+  -> https://www.solana.fm/address/2Ri9qynLQ9F6xKSEgmcMMptbFra6JYRMdH19k7EFS8nc?cluster=devnet-alpha
+
   
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions
-are welcome!
-
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use
