@@ -1,0 +1,178 @@
+{
+  "program": {
+    "candyMachine": "",
+    "candyGuard": "",
+    "candyMachineCreator": "",
+    "collectionMint": "CdHfRQuzqj7BjJrFvhihXNqkKu5iJdZPk9Ueo5uUnt5q"
+  },
+  "items": {
+    "-1": {
+      "name": "Bored Ape Yacht Club Collection",
+      "image_hash": "79bc2aa7d0eef0b28945f8094c26373c67535638a0c60a661c72684c6c777b0f",
+      "image_link": "https://gateway.irys.xyz/8zqfpzCutS6Ss2tuvLn6ZNEFdm6VQTdvGd2Fz7PKpwkh?ext=png",
+      "metadata_hash": "76ee0d3541598cfa9c851fe04217528c4408254a16446a25fe6a3bf5d41e16e7",
+      "metadata_link": "https://gateway.irys.xyz/JA2XzEx2Qf4ZXdFycwyJBtjvde7KqrLQDyFnXKUxDMsh",
+      "onChain": true
+    },
+    "0": {
+      "name": "Bored Ape #0",
+      "image_hash": "9d1b2dc7a3ae37f313efce97b1bb8af53365809b82be47c169a2fdf61c9f26b1",
+      "image_link": "https://gateway.irys.xyz/97AAtsfps9dM2nXVkH8HD6yMz3hebaedpwGrDedozKjY?ext=png",
+      "metadata_hash": "ece1c7bc31f5c3c7b473731cc7666e7938c72e90e87756e4070e20d593af5c1d",
+      "metadata_link": "https://gateway.irys.xyz/GPw7xLHUU6SZR5MbSMLZyByYKzMcfB76Uc1atjuS8opL",
+      "onChain": false
+    },
+    "1": {
+      "name": "Bored Ape #1",
+      "image_hash": "15d72f4defd71474beaba9f5c11e0e3049374964c7dde6c8964f30ed866a885d",
+      "image_link": "https://gateway.irys.xyz/Af97gFqSZFfgWkfbJ5t2T3K3PhBx5aV4QHLa4E2ZS7Qj?ext=png",
+      "metadata_hash": "cd4a54545b747c94fccc7e431abf24fabe206de1d9cf99e0704f4a93225508f3",
+      "metadata_link": "https://gateway.irys.xyz/64ybuawhAZpV1Rh1TGu6HJoFsYgQjLRWZoKzTLtmnb28",
+      "onChain": false
+    },
+    "2": {
+      "name": "Bored Ape #2",
+      "image_hash": "c3f6e80b3cdcd6a7c4afcdc7a7e09ea9dc9859b7ce864c1ad27df24e64c4bbc9",
+      "image_link": "https://gateway.irys.xyz/BzfpLroqNKjZmftpKGAxZJfE56NKVZZHMwRNfb8CGDks?ext=png",
+      "metadata_hash": "89a1bec301a385d834d712521336b638890e35e94cbc4e620c61dcb58b3c6fd4",
+      "metadata_link": "https://gateway.irys.xyz/2fFA2HWwrsb1zCNwmBxGP6KCEwRHnGgWgxsaAKwY6HYK",
+      "onChain": false
+    },
+    "3": {
+      "name": "Bored Ape #3",
+      "image_hash": "c58277709383482c7f92db23e1c871c6eb28fcabe45eed3f58efc40c72598784",
+      "image_link": "https://gateway.irys.xyz/8GWWP8e17NmyRKnRq75xU7RZajEW6uAr3yTQm15etMAA?ext=png",
+      "metadata_hash": "6cf6c80b2495075406075e8d0d4932bf01599ccb17a4b212bc8affea713fb5e7",
+      "metadata_link": "https://gateway.irys.xyz/8BEquQ4eFvMF3sVXZgjm81oqkAobHNkCXVHkMAXjZrfv",
+      "onChain": false
+    },
+    "4": {
+      "name": "Bored Ape #4",
+      "image_hash": "cfa66a095ac408929db636c35209e2a2459bf5c9ee93653069c492ab4ff5910e",
+      "image_link": "https://gateway.irys.xyz/ATcPiapJLDHoycmQnS64kAKBWSVceGV5pj6RV2x4i3eX?ext=png",
+      "metadata_hash": "f259d1e965bc264a0750cb3bfd827b6c86dd544413b76e9c59035918f23a9041",
+      "metadata_link": "https://gateway.irys.xyz/3qTaQT3ufLT5xbo3M4ZuXgk5TGthzWzKoQwhCJVfCiy5",
+      "onChain": false
+    },
+    "5": {
+      "name": "Bored Ape #5",
+      "image_hash": "e85fe0dab7124ac76796a6c20856b92fdfc65230c2206e4701fc91c85979a964",
+      "image_link": "https://gateway.irys.xyz/Cra9UwX9qJUmZTisoZpL4gjpUvna3eceZsGwpr2Ui8Hh?ext=png",
+      "metadata_hash": "55d915e4a90e11812b3db2a33233feafdbd0aee07decfd6fae337bf9e604861c",
+      "metadata_link": "https://gateway.irys.xyz/9yYwrxaeTq8yCENaCnfnhWiZy3mcntXi8gWJ1K8x8xGh",
+      "onChain": false
+    },
+    "6": {
+      "name": "Bored Ape #6",
+      "image_hash": "e7df2825bd39f3b05f3cce9da2bba5b6a6f785c5360883503f9ebc8ca6fe1f21",
+      "image_link": "https://gateway.irys.xyz/6StS317sPfnryDf72VvbWetuFfWHuDLZZVbw5sfzLSLJ?ext=png",
+      "metadata_hash": "31206c8bb1e3d4e0bbf8832e0cf922594345917efcc1cb6344e6b71314aa0bf0",
+      "metadata_link": "https://gateway.irys.xyz/2uCYkJwiWrDKgfy5AFQ3cWjyuhm8dJgDTpkZyGmGAxhV",
+      "onChain": false
+    },
+    "7": {
+      "name": "Bored Ape #7",
+      "image_hash": "e7c38e6dd1cdee0f1d157dbb92faa4b91139574dcfc82d765aadebe7a3fa150a",
+      "image_link": "https://gateway.irys.xyz/7vUNx9JPrJfsv56huExQayDnLzJzVfLT1hcUueenPLS3?ext=png",
+      "metadata_hash": "47641cd92ea78f64dc21b12b48385a37063ac1d7201a2276bae9b6aa20609d09",
+      "metadata_link": "https://gateway.irys.xyz/5DiS2tnoV3Ye1vKRGVTGSkzRiR9vUwWd1TfaPca4FRxf",
+      "onChain": false
+    },
+    "8": {
+      "name": "Bored Ape #8",
+      "image_hash": "98024f49489c31fd925aaba84279f2164ff11e374375fc8c8b2e4967b94cc44a",
+      "image_link": "https://gateway.irys.xyz/AgnwBeFhL4akMSrgqdeaGG3RnrXix6F2T858Erekb2rT?ext=png",
+      "metadata_hash": "3feb4b0732b768a763f71a92afb9a1d44c595f706570cc8a3eddfcae613503c1",
+      "metadata_link": "https://gateway.irys.xyz/EMwVE5TJLon67DgdakXgeTPAcFvXNPvBKuQVnubFqvtK",
+      "onChain": false
+    },
+    "9": {
+      "name": "Bored Ape #9",
+      "image_hash": "ca6a2d5f44672f2f1db1e227d7d414d55574686ccb85819cd47aebc64778b3a9",
+      "image_link": "https://gateway.irys.xyz/7hR4UZVEZaNJ2bSzYoeWQE3CjaWRsS1B5a6Cr5zQEMBn?ext=png",
+      "metadata_hash": "29b7b558a02c44fd7b065afeede42212b35e7ad55e7a7322d029b1925a5607e5",
+      "metadata_link": "https://gateway.irys.xyz/4K75aGe9bLk1S653qVE5KdTxEJpVFngJasbrLDUC1dMc",
+      "onChain": false
+    },
+    "10": {
+      "name": "Bored Ape #10",
+      "image_hash": "11cf9c6f552e1928123e19919469f9a79d603a2e92fff8de27e593ce075c9b97",
+      "image_link": "https://gateway.irys.xyz/9mEQQBoCPsJ9WpArNSfMJFrZw84R5prkU5fnWBV9iFEa?ext=png",
+      "metadata_hash": "9d2feb0bc299b671bf2beff4006e32e51d38277c5eb3c51ef52873f89a4046af",
+      "metadata_link": "https://gateway.irys.xyz/5WUqSQykth95mJGyCfDbChWCQEHAk1G3cmUSJB6p1oij",
+      "onChain": false
+    },
+    "11": {
+      "name": "Bored Ape #11",
+      "image_hash": "a8b9758106e687e5b00541f2da2624e92f972164b2cdd638a710d8c9688f6589",
+      "image_link": "https://gateway.irys.xyz/84fTLM3v94K3rHWrJPz9m2kNde26HYdbwwu4gnCroR6y?ext=png",
+      "metadata_hash": "962fb2a71f9618eea0358285cd4fadf8a9b0c7d88421de313598a721b5a7e7eb",
+      "metadata_link": "https://gateway.irys.xyz/1EKPCReZPLrd3wNXfjAxxz9JJs5UREov7LdW414UT6o",
+      "onChain": false
+    },
+    "12": {
+      "name": "Bored Ape #12",
+      "image_hash": "e30d3886de104bb1e095520391f83f840e2f75ebbedd0d8ff001e3b75267a994",
+      "image_link": "https://gateway.irys.xyz/9YWwahGfeBNF58X1GZcg64LHh4M8DA9WS4fmCUeAtTtK?ext=png",
+      "metadata_hash": "e159106aaf0527f5107045b22aa98a33244ef86c4f89feabd887b2dbf629ae4e",
+      "metadata_link": "https://gateway.irys.xyz/6i13BnbDJ1Yqaj2AYnNRAXN71vZyxAR9Kzp7jiTb5Y7b",
+      "onChain": false
+    },
+    "13": {
+      "name": "Bored Ape #13",
+      "image_hash": "65235f8d84eba7cb516ae1ea74701ce329e9374213b795a1705023d36981a3d1",
+      "image_link": "https://gateway.irys.xyz/8N7iVCDPk3RpNLpo2atEE7rEa3QfoHyBXwN4eBKpFnTJ?ext=png",
+      "metadata_hash": "3cbaebc6b7466503de5bc5e542860a3d4dba270c8a311ad4900f3ad97b2406aa",
+      "metadata_link": "https://gateway.irys.xyz/ChNbCB6grsjPZw6N5j4aizY6RdqzrjBQVz8xHBdApqjh",
+      "onChain": false
+    },
+    "14": {
+      "name": "Bored Ape #14",
+      "image_hash": "c7120fd0d66f901e459a5b2cfcd42a23cdff26ee2983685ae4ee35d6a38b6c57",
+      "image_link": "https://gateway.irys.xyz/Gupmsva8zJuGwX3o9WUgXK3DgNqvYxq9H81VcSi6SZWW?ext=png",
+      "metadata_hash": "7f834266b19ad5cbe94ff3544713ace7a507a95b713322ee73a03fb9a39b904d",
+      "metadata_link": "https://gateway.irys.xyz/2JbV36G2Qu7CoSFNq2oj9ETpxxScP1sND4ivG45gC7gJ",
+      "onChain": false
+    },
+    "15": {
+      "name": "Bored Ape #15",
+      "image_hash": "7caec181038ed101c2d24d1c0313d1cf83f39588d3438aa4ab707fc154eb6a92",
+      "image_link": "https://gateway.irys.xyz/GTeQBVXz8st5wvUA3rsEkjwAh9XbZCSsrWFkioDVfnGD?ext=png",
+      "metadata_hash": "dc363d93d47c9e2a72766f6b8ecb9b51dadebc4662fe3d3f60d3270e2a499d3f",
+      "metadata_link": "https://gateway.irys.xyz/EECp6MP66reRaB1vjN5RPjDeMgjhyx6kNxf9aUVjZE2n",
+      "onChain": false
+    },
+    "16": {
+      "name": "Bored Ape #16",
+      "image_hash": "bf5682db92fea996020dffc4b69ad1c465aefded270d73ce38680c937d08ff0c",
+      "image_link": "https://gateway.irys.xyz/2UpDc18kjawRGju6KXJEYs9jRVjwwM47NrmXrPzdjqDc?ext=png",
+      "metadata_hash": "41ec14ed87a5b7252fa5f9927ae9ab2f309d9110ed3936976f392abfda29e084",
+      "metadata_link": "https://gateway.irys.xyz/8NDArJWZiScV5jw9Wm1uF2AnQn261WzQL4SggdsFNEJS",
+      "onChain": false
+    },
+    "17": {
+      "name": "Bored Ape #17",
+      "image_hash": "8941a76d82ddf41583bec335ae46cecb80075f5645997cdf878f3040d6d7ff32",
+      "image_link": "https://gateway.irys.xyz/8R96fk1RHjYarofAFnqhA2QVs3nYc3xmyyr9AKeZBSTa?ext=png",
+      "metadata_hash": "2f62aacc846ca7104ec63130bb00d508ad381fe864612800d34080133ed339e1",
+      "metadata_link": "https://gateway.irys.xyz/HGGLwvKeDeLmbXSu31hwQQxE1U8xGVrSqcar4tLh6vj4",
+      "onChain": false
+    },
+    "18": {
+      "name": "Bored Ape #18",
+      "image_hash": "db6def57486b7c227f53698e6d14ec5bd406c5cc3ad7ae597a5210d2102f8094",
+      "image_link": "https://gateway.irys.xyz/Dbi2FA4R4qShKmu2ByktUqMT5tLeU1tixvFgHR2SvLnW?ext=png",
+      "metadata_hash": "3176fc5c6a04a8a16cf59d77a9648fb6b723ac84d05bf7759bdc14404e7c5249",
+      "metadata_link": "https://gateway.irys.xyz/CR3J7kWRJmpNt7aCw9PFcXw7BrAxvaFc7yxCbUhbr3ZU",
+      "onChain": false
+    },
+    "19": {
+      "name": "Bored Ape #19",
+      "image_hash": "959b2499797f8b78064b19eeb63633cfee43583ca5a61c60fd420b8e23ee698b",
+      "image_link": "https://gateway.irys.xyz/7phQ7NZDwsyG3iiYjhN9sisEj5rocTFohW7Pee9Gn1W9?ext=png",
+      "metadata_hash": "582f852fdb29227e60c4a6908285b0f1ecb9db789c720e03371fe1ecbe854723",
+      "metadata_link": "https://gateway.irys.xyz/4wtyRfdcyKyRRcemdHmSjH9gmUpJqroBKJu7zLUaUxdK",
+      "onChain": false
+    }
+  }
+}
