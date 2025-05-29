@@ -54,7 +54,7 @@ importers:
         specifier: ^2.1.1
         version: 2.1.1
       jotai:
-        specifier: ^2.12.3
+        specifier: ^2.12.5
         version: 2.12.5(@types/react@19.1.6)(react@19.1.0)
       lucide-react:
         specifier: ^0.503.0
@@ -94,7 +94,7 @@ importers:
         specifier: ^29.5.14
         version: 29.5.14
       '@types/node':
-        specifier: ^22.15.24
+        specifier: ^22.14.1
         version: 22.15.24
       '@types/react':
         specifier: ^19.1.2
