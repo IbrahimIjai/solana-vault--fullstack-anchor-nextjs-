@@ -1,7 +1,8 @@
 {
-  "name": "shadcn-ui-monorepo",
+  "name": "solana-projects",
   "version": "0.0.1",
   "private": true,
+  "author": "Ibrahim  Ijai Whizibrahim@gmail.com",
   "scripts": {
     "build": "turbo build",
     "dev": "turbo dev",
