@@ -2,3 +2,9 @@ packages:
   - "apps/*"
   - "packages/*"
 
+
+catalogs:
+  react:
+    "next": 15.4.5
+  web3:
+    "wagmi": 2.15.3
