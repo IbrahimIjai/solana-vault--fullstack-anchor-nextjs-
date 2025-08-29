@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import { Button } from '@workspace/ui/components/button'
 import { ArrowRight, Sparkles, Zap, ShoppingCart, Star } from 'lucide-react'
 import { getPlaceholderImage } from './placeholder-images'
 

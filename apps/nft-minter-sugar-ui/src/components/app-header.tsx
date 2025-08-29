@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation'
 import { useState, useEffect } from 'react'
 
 import Link from 'next/link'
-import { Button } from '@/components/ui/button'
+import { Button } from '@workspace/ui/components/button'
 import { Menu, X } from 'lucide-react'
 import { ThemeSelect } from '@/components/theme-select'
 import { ClusterUiSelect } from './cluster/cluster-ui'

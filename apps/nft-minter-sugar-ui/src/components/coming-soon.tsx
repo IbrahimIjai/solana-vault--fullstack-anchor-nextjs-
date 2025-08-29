@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { AppLayout } from './app-layout'
-import { Button } from './ui/button'
+import { Button } from '@workspace/ui/components/button'
 import Link from 'next/link'
 import { ArrowLeft, Clock, CalendarDays, Bell } from 'lucide-react'
 import { motion } from 'motion/react'

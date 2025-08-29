@@ -16,12 +16,12 @@ import {
   useTransferSol,
 } from './account-data-access'
 import { ellipsify } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
+import { Button } from '@workspace/ui/components/button'
 import { AppAlert } from '@/components/app-alert'
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table'
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@workspace/ui/components/table'
 import { AppModal } from '@/components/app-modal'
-import { Input } from '@/components/ui/input'
-import { Label } from '@/components/ui/label'
+import { Input } from '@workspace/ui/components/input'
+import { Label } from '@workspace/ui/components/label'
 
 export function AccountBalance({ address }: { address: PublicKey }) {
   const query = useGetBalance({ address })
