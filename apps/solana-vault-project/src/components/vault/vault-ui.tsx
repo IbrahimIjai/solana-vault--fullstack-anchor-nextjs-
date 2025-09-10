@@ -8,9 +8,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@workspace/ui/componen
 import { ArrowDownToLine, ArrowUpFromLine, ExternalLink, Loader2, RefreshCw } from 'lucide-react'
 import { useState } from 'react'
 import { toast } from 'sonner'
-import { Skeleton } from '../ui/skeleton'
-import { Label } from '../ui/label'
-import { Input } from '../ui/input'
+import { Skeleton } from '@workspace/ui/components/skeleton'
+import { Label } from '@workspace/ui/components/label'
+import { Input } from '@workspace/ui/components/input'
 import { useCluster } from '../cluster/cluster-data-access'
 
 export function VaultProgramUI() {

@@ -1,6 +1,6 @@
 'use client'
 
-import { getCounterProgram as getVaultProgram, getCounterProgramId } from '@project/anchor'
+import { getCounterProgram as getVaultProgram, getCounterProgramId } from '../../../anchor'
 import { useConnection, useWallet } from '@solana/wallet-adapter-react'
 import { PublicKey, SystemProgram, SYSVAR_RENT_PUBKEY } from '@solana/web3.js'
 import { useEffect, useMemo, useState } from 'react'
