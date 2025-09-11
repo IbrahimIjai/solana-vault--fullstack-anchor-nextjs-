@@ -2,9 +2,9 @@
 
 import React, { useState } from 'react';
 import { AppLayout } from '@/components/app-layout';
-import { Button } from '@/components/ui/button';
+import { Button } from '@workspace/ui/components/button'
 import Image from 'next/image';
-import { Skeleton } from '@/components/ui/skeleton';
+import { Skeleton } from '@workspace/ui/components/skeleton'
 import { toast } from 'sonner';
 
 // NFT Collection details

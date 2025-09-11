@@ -4,9 +4,9 @@ import { ThemeProvider } from './theme-provider'
 import { Toaster } from '@workspace/ui/components/sonner'
 import { AppHeader } from '@/components/app-header'
 import React from 'react'
-import { AppFooter } from '@/components/app-footer'
 import { ClusterChecker } from '@/components/cluster/cluster-ui'
 import { AccountChecker } from '@/components/account/account-ui'
+import Link from 'next/link'
 
 // Default navigation links if none are provided
 const defaultNavLinks = [
@@ -25,7 +25,7 @@ export function AppLayout({
   links?: { label: string; path: string }[]
 }) {
   return (
-    <ThemeProvider >
+    <ThemeProvider>
       <div className="flex flex-col min-h-screen">
         <AppHeader links={links} />
         <main className="flex-grow pt-20 md:pt-24">
@@ -38,7 +38,12 @@ export function AppLayout({
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
               <div className="col-span-2 sm:col-span-2 md:col-span-1 mb-4 md:mb-0">
-                <h3 className="font-bold text-base sm:text-lg mb-3 sm:mb-4">BoredApe<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">SOL</span></h3>
+                <h3 className="font-bold text-base sm:text-lg mb-3 sm:mb-4">
+                  BoredApe
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">
+                    SOL
+                  </span>
+                </h3>
                 <p className="text-gray-400 text-sm sm:text-base">
                   The premier NFT collection on Solana blockchain. Unique digital collectibles with real utility.
                 </p>
@@ -46,28 +51,76 @@ export function AppLayout({
               <div>
                 <h4 className="font-medium text-sm sm:text-base mb-3 sm:mb-4">Links</h4>
                 <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm">
-                  <li><a href="/" className="hover:text-white transition-colors">Home</a></li>
-                  <li><a href="/mint" className="hover:text-white transition-colors">Mint</a></li>
-                  <li><a href="/marketplace" className="hover:text-white transition-colors">Marketplace</a></li>
-                  <li><a href="/collection" className="hover:text-white transition-colors">Collection</a></li>
+                  <li>
+                    <Link href="/" className="hover:text-white transition-colors">
+                      Home
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/mint" className="hover:text-white transition-colors">
+                      Mint
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/marketplace" className="hover:text-white transition-colors">
+                      Marketplace
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/collection" className="hover:text-white transition-colors">
+                      Collection
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-medium text-sm sm:text-base mb-3 sm:mb-4">Resources</h4>
                 <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm">
-                  <li><a href="#" className="hover:text-white transition-colors">FAQ</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Whitepaper</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Terms</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
+                  <li>
+                    <Link href="#" className="hover:text-white transition-colors">
+                      FAQ
+                    </Link>
+                  </li>
+                  <li>
+                    <a href="#" className="hover:text-white transition-colors">
+                      Whitepaper
+                    </a>
+                  </li>
+                  <li>
+                    <Link href="#" className="hover:text-white transition-colors">
+                      Terms
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="hover:text-white transition-colors">
+                      Privacy
+                    </Link>
+                  </li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-medium text-sm sm:text-base mb-3 sm:mb-4">Community</h4>
                 <ul className="space-y-1 sm:space-y-2 text-gray-400 text-sm">
-                  <li><a href="#" className="hover:text-white transition-colors">Discord</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
-                  <li><a href="#" className="hover:text-white transition-colors">Medium</a></li>
+                  <li>
+                    <Link href="#" className="hover:text-white transition-colors">
+                      Discord
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="hover:text-white transition-colors">
+                      Twitter
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="hover:text-white transition-colors">
+                      Instagram
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="#" className="hover:text-white transition-colors">
+                      Medium
+                    </Link>
+                  </li>
                 </ul>
               </div>
             </div>

@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { AppProviders } from '@/components/app-providers'
-import { AppLayout } from '@/components/app-layout'
 import React from 'react'
 import { Space_Grotesk, Syne, Outfit } from 'next/font/google'
 
