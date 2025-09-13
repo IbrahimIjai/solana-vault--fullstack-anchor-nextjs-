@@ -9,19 +9,12 @@ export const metadata: Metadata = {
   description: 'A showcase project demonstrating secure locking and unlocking of SPL tokens on the Solana blockchain',
 }
 
-const links: { label: string; path: string }[] = [
-  // More links...
-  { label: 'Home', path: '/' },
-  { label: 'Account', path: '/account' },
-  { label: 'Vault Program', path: '/vault' },
-]
-
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased`}>
         <AppProviders>
-          <AppLayout links={links}>{children}</AppLayout>
+          <AppLayout>{children}</AppLayout>
         </AppProviders>
       </body>
     </html>
