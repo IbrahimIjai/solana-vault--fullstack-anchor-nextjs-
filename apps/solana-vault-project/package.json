@@ -31,6 +31,7 @@
     "@solana/web3.js": "catalog:web3",
     "@tanstack/react-query": "catalog:react",
     "@workspace/ui": "workspace:*",
+    "solana-playground-sdk": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "jotai": "^2.12.3",

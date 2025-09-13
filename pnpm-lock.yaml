@@ -135,6 +135,9 @@ importers:
       react-dom:
         specifier: catalog:react
         version: 19.1.1(react@19.1.1)
+      solana-playground-sdk:
+        specifier: workspace:*
+        version: link:../../packages/sdk
       sonner:
         specifier: ^2.0.3
         version: 2.0.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
@@ -259,6 +262,9 @@ importers:
       react-dom:
         specifier: catalog:react
         version: 19.1.1(react@19.1.1)
+      solana-playground-sdk:
+        specifier: workspace:*
+        version: link:../../packages/sdk
       sonner:
         specifier: ^2.0.7
         version: 2.0.7(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
