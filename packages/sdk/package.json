@@ -1,8 +1,8 @@
 {
-	"name": "svm_ui_demo_sdk",
+	"name": "solana-playground-sdk",
 	"version": "1.0.0",
 	"private": true,
-	"description": "SDK for my SVM Test and fun apps",
+	"description": "Fun SDK for Solana experiments and playground projects",
 	"keywords": [
 		"Solana",
 		"SDK",
@@ -20,11 +20,7 @@
 		"build": "tsc",
 		"check": "tsc --pretty --noEmit",
 		"clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
-		"dev": "tsc -w",
-		"test": "jest --passWithNoTests"
-	},
-	"jest": {
-		"preset": "@koan/jest-config"
+		"dev": "tsc -w"
 	},
 	"dependencies": {
 		"@tanstack/react-query": "catalog:react",
@@ -37,10 +33,8 @@
 		"typescript": "catalog:react"
 	},
 	"peerDependencies": {
-		"koan": "*",
 		"react": "*",
-		"react-dom": "*",
-		"tailwindcss": "*"
+		"react-dom": "*"
 	},
 	"peerDependenciesMeta": {
 		"react": {
@@ -48,12 +42,6 @@
 		},
 		"react-dom": {
 			"optional": false
-		},
-		"koan": {
-			"optional": true
-		},
-		"tailwindcss": {
-			"optional": true
 		}
 	}
 }

@@ -1,8 +1,7 @@
 {
-  "extends": [
-    // "@tsconfig/strictest/tsconfig",
-    "@tsconfig/esm/tsconfig"
-  ],
+  "_deprecated": true,
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "ESM",
   "include": [
     "src"
   ],
@@ -12,6 +11,9 @@
     ".turbo"
   ],
   "compilerOptions": {
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
     "rootDir": "./src",
     "outDir": "./dist", 
     "jsx": "react-jsx",
@@ -19,8 +21,6 @@
       "ESNext",
       "DOM"
     ],
-    "module": "ESNext",
-    "moduleResolution": "Bundler",
     "target": "ESNext",
     "skipLibCheck": true,
     "sourceMap": true,
