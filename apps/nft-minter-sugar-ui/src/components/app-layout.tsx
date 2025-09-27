@@ -7,6 +7,7 @@ import { ModernFooter } from '@/components/modern-footer'
 import React from 'react'
 import { ClusterChecker } from '@/components/cluster/cluster-ui'
 import { AccountChecker } from '@/components/account/account-ui'
+import { AppFooter } from './app-footer'
 
 // Default navigation links if none are provided
 const defaultNavLinks = [
@@ -34,7 +35,7 @@ export function AppLayout({
           </ClusterChecker>
           {children}
         </main>
-        <ModernFooter />
+        <AppFooter />
       </div>
       <Toaster position="top-right" richColors closeButton />
     </ThemeProvider>

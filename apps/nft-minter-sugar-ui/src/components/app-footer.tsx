@@ -1,4 +1,5 @@
 import React from 'react'
+import { ThemeSelect } from './theme-select'
 
 export function AppFooter() {
   return (
@@ -12,6 +13,7 @@ export function AppFooter() {
       >
         create-solana-dapp
       </a>
+      <ThemeSelect />
     </footer>
   )
 }

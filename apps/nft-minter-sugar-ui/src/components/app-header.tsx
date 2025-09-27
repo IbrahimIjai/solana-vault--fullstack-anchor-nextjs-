@@ -93,7 +93,6 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
             <div className="hidden md:flex items-center space-x-3">
               <WalletButton />
               <ClusterUiSelect />
-              <ThemeSelect />
             </div>
 
             {/* Mobile menu button */}
