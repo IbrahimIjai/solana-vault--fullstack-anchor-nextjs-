@@ -1,0 +1,51 @@
+{
+  "name": "BAYC #31",
+  "symbol": "BAYC",
+  "description": "Bored Ape Yacht Club NFT #31",
+  "image": "31.png",
+  "attributes": [
+    {
+      "trait_type": "Clothes",
+      "value": "Black Holes T"
+    },
+    {
+      "trait_type": "Background",
+      "value": "Yellow"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Eyepatch"
+    },
+    {
+      "trait_type": "Fur",
+      "value": "Dmt"
+    },
+    {
+      "trait_type": "Earring",
+      "value": "Silver Hoop"
+    },
+    {
+      "trait_type": "Hat",
+      "value": "Party Hat 2"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Bored Unshaven"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "31.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "8gEiTqA8FDQ9Y4sRco9nW6ATnpVCcSAcN9BCYxaPPgzR",
+        "share": 100
+      }
+    ]
+  }
+}

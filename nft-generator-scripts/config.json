@@ -1,0 +1,24 @@
+{
+  "tokenStandard": "nft",
+  "number": 40,
+  "symbol": "BAYC",
+  "sellerFeeBasisPoints": 100,
+  "isMutable": true,
+  "isSequential": true,
+  "creators": [
+    {
+      "address": "8gEiTqA8FDQ9Y4sRco9nW6ATnpVCcSAcN9BCYxaPPgzR",
+      "share": 100
+    }
+  ],
+  "uploadMethod": "bundlr",
+  "ruleSet": null,
+  "awsConfig": null,
+  "sdriveApiKey": null,
+  "nftStorageAuthToken": null,
+  "shdwStorageAccount": null,
+  "pinataConfig": null,
+  "hiddenSettings": null,
+  "guards": null,
+  "maxEditionSupply": null
+}

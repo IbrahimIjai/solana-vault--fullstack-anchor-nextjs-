@@ -1,0 +1,47 @@
+{
+  "name": "BAYC #4",
+  "symbol": "BAYC",
+  "description": "Bored Ape Yacht Club NFT #4",
+  "image": "4.png",
+  "attributes": [
+    {
+      "trait_type": "Clothes",
+      "value": "Navy Striped Tee"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Phoneme L"
+    },
+    {
+      "trait_type": "Hat",
+      "value": "Party Hat 2"
+    },
+    {
+      "trait_type": "Fur",
+      "value": "Golden Brown"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Closed"
+    },
+    {
+      "trait_type": "Background",
+      "value": "Blue"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "4.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "8gEiTqA8FDQ9Y4sRco9nW6ATnpVCcSAcN9BCYxaPPgzR",
+        "share": 100
+      }
+    ]
+  }
+}

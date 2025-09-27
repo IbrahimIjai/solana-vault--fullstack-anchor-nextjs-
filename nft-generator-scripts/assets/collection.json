@@ -1,0 +1,22 @@
+{
+  "name": "BAYC Collection",
+  "symbol": "BAYC",
+  "description": "Bored Ape Yacht Club NFT Collection",
+  "image": "collection.jpg",
+  "external_url": "https://boredapeyachtclub.com",
+  "properties": {
+    "files": [
+      {
+        "uri": "collection.jpg",
+        "type": "image/jpeg"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "8gEiTqA8FDQ9Y4sRco9nW6ATnpVCcSAcN9BCYxaPPgzR",
+        "share": 100
+      }
+    ]
+  }
+}

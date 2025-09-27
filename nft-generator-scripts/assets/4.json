@@ -1,0 +1,47 @@
+{
+  "name": "BAYC #5",
+  "symbol": "BAYC",
+  "description": "Bored Ape Yacht Club NFT #5",
+  "image": "5.png",
+  "attributes": [
+    {
+      "trait_type": "Hat",
+      "value": "Bayc Flipped Brim"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "X Eyes"
+    },
+    {
+      "trait_type": "Fur",
+      "value": "Brown"
+    },
+    {
+      "trait_type": "Background",
+      "value": "Army Green"
+    },
+    {
+      "trait_type": "Clothes",
+      "value": "Bayc T Red"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Dumbfounded"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "5.png",
+        "type": "image/png"
+      }
+    ],
+    "category": "image",
+    "creators": [
+      {
+        "address": "8gEiTqA8FDQ9Y4sRco9nW6ATnpVCcSAcN9BCYxaPPgzR",
+        "share": 100
+      }
+    ]
+  }
+}
