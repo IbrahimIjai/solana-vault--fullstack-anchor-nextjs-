@@ -48,18 +48,18 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Button variant="link" asChild className="p-0">
             <Link href="/" className="flex items-center space-x-2">
               <div className="relative w-10 h-10 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-500 rounded-lg"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg"></div>
                 <div className="absolute inset-0.5 bg-white dark:bg-black rounded-lg flex items-center justify-center">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500 font-bold text-xl">B</span>
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 font-bold text-xl">🏕️</span>
                 </div>
               </div>
-              <span className="font-bold text-xl text-black dark:text-white font-syne">BoredApe<span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-500">SOL</span></span>
+              <span className="font-semibold text-lg text-black dark:text-white">Camp<span className="text-orange-600">SOL</span></span>
             </Link>
           </Button>
 
@@ -70,10 +70,10 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
                 key={link.path}
                 variant="ghost"
                 asChild
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors font-outfit ${
+                className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
                   isActive(link.path)
-                    ? 'text-black bg-black/10 dark:text-white dark:bg-white/10'
-                    : 'text-gray-700 hover:text-black hover:bg-black/5 dark:text-gray-300 dark:hover:text-white dark:hover:bg-white/5'
+                    ? 'text-orange-600 bg-orange-50 dark:text-orange-400 dark:bg-orange-900/20'
+                    : 'text-gray-600 hover:text-orange-600 hover:bg-orange-50 dark:text-gray-400 dark:hover:text-orange-400 dark:hover:bg-orange-900/20'
                 }`}
               >
                 <Link href={link.path}>
@@ -112,10 +112,10 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
                   key={link.path}
                   variant="ghost"
                   asChild
-                  className={`px-4 py-3 rounded-lg text-base font-medium justify-start font-outfit ${
+                  className={`px-4 py-3 rounded-lg text-base font-medium justify-start ${
                     isActive(link.path)
-                      ? 'text-black bg-black/10 dark:text-white dark:bg-white/10'
-                      : 'text-gray-700 hover:text-black hover:bg-black/5 dark:text-gray-300 dark:hover:text-white dark:hover:bg-white/5'
+                      ? 'text-orange-600 bg-orange-50 dark:text-orange-400 dark:bg-orange-900/20'
+                      : 'text-gray-600 hover:text-orange-600 hover:bg-orange-50 dark:text-gray-400 dark:hover:text-orange-400 dark:hover:bg-orange-900/20'
                   }`}
                   onClick={() => setShowMenu(false)}
                 >
