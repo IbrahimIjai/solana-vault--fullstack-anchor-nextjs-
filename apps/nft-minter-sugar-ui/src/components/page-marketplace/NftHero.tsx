@@ -1,1 +1,1 @@
-export { NftHero } from '../landing/nft-landing'
+export { NftHero } from '../page-landing/nft-landing'

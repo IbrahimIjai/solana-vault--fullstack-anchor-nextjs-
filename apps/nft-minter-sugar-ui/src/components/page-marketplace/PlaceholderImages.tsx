@@ -1,1 +1,1 @@
-export * from '../landing/placeholder-images'
+export * from '../page-landing/placeholder-images'
