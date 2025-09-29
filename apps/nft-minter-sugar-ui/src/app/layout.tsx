@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import '@workspace/ui/styles/globals.css'
 import { AppProviders } from '@/components/app-providers'
 import React from 'react'
 import { Inter } from 'next/font/google'
