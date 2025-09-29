@@ -5,20 +5,18 @@ import { motion } from 'motion/react'
 import Link from 'next/link'
 import { Button } from '@workspace/ui/components/button'
 import { Menu, X } from 'lucide-react'
-import { ThemeSelect } from '@/components/theme-select'
 import { ClusterUiSelect } from './cluster/cluster-ui'
 import { WalletButton } from '@/components/solana/solana-provider'
 
 // Default navigation links if none are provided
-const defaultNavLinks = [
-  { label: 'Home', path: '/' },
-  { label: 'Mint', path: '/mint' },
-  { label: 'Marketplace', path: '/marketplace' },
-  { label: 'Collection', path: '/collection' },
-  { label: 'Roadmap', path: '/roadmap' },
-]
+  const navigation = [
+    { name: 'Home', href: '/' },
+    { name: 'Mint', href: '/mint' },
+    { name: 'Marketplace', href: '/marketplace' },
+  ]
 
-export function AppHeader({ links = defaultNavLinks }: { links?: { label: string; path: string }[] }) {
+
+export function AppHeader() {
   const pathname = usePathname()
   const [showMenu, setShowMenu] = useState(false)
   const [scrolled, setScrolled] = useState(false)
@@ -47,53 +45,95 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md py-3' : 'bg-transparent py-5'
-        }`}
-      >
+      <div className="container mx-auto max-w-6xl flex h-16 items-center justify-between px-4">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center">
             {/* Logo */}
-            <Button variant="link" asChild className="p-0">
+            <div className="flex items-center space-x-4">
               <Link href="/" className="flex items-center space-x-2">
-                <div className="relative w-10 h-10 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg"></div>
-                  <div className="absolute inset-0.5 bg-white dark:bg-black rounded-lg flex items-center justify-center">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500 font-bold text-xl">
-                      🏕️
-                    </span>
-                  </div>
-                </div>
-                <span className="font-semibold text-lg text-black dark:text-white">
-                  Camp<span className="text-orange-600">SOL</span>
-                </span>
+                <motion.div
+                  className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center"
+                  whileHover={{ scale: 1.1, rotate: 360 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <span className="text-primary-foreground font-bold text-sm">BA</span>
+                </motion.div>
+                <span className="font-bold text-xl">BoredApe NFT</span>
               </Link>
-            </Button>
+            </div>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-1">
-              {links.map((link) => (
-                <Button
-                  key={link.path}
-                  variant="ghost"
-                  asChild
-                  className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                    isActive(link.path)
-                      ? 'text-orange-600 bg-orange-50 dark:text-orange-400 dark:bg-orange-900/20'
-                      : 'text-gray-600 hover:text-orange-600 hover:bg-orange-50 dark:text-gray-400 dark:hover:text-orange-400 dark:hover:bg-orange-900/20'
-                  }`}
+            <nav className="hidden md:flex items-center space-x-6">
+              {navigation.map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}
                 >
-                  <Link href={link.path}>{link.label}</Link>
-                </Button>
+                  <Link
+                    href={item.href}
+                    className="text-foreground/80 hover:text-foreground transition-colors font-medium relative group"
+                  >
+                    {item.name}
+                    <motion.div
+                      className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"
+                      whileHover={{ width: '100%' }}
+                    />
+                  </Link>
+                </motion.div>
               ))}
             </nav>
 
-            {/* Right side buttons */}
-            <div className="hidden md:flex items-center space-x-3">
+            <div className="flex items-center space-x-4">
               <WalletButton />
               <ClusterUiSelect />
+
+              {/* Mobile Menu */}
+              {/* <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" className="md:hidden">
+                    <Menu className="h-5 w-5" />
+                    <span className="sr-only">Toggle menu</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="w-[300px] sm:w-[400px]">
+                  <nav className="flex flex-col space-y-4 mt-8">
+                    {navigation.map((item, index) => (
+                      <motion.div
+                        key={item.name}
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.3, delay: index * 0.1 }}
+                      >
+                        <Link
+                          href={item.href}
+                          className="text-foreground/80 hover:text-foreground transition-colors font-medium text-lg"
+                          onClick={() => setIsOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      </motion.div>
+                    ))}
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: 0.4 }}
+                    >
+                      <Button className="mt-6 w-full">
+                        <Wallet className="h-4 w-4 mr-2" />
+                        Connect Wallet
+                      </Button>
+                    </motion.div>
+                  </nav>
+                </SheetContent>
+              </Sheet> */}
             </div>
+
+            {/* Right side buttons
+            <div className="hidden md:flex items-center space-x-3">
+            
+            </div> */}
 
             {/* Mobile menu button */}
             <Button
@@ -107,36 +147,8 @@ export function AppHeader({ links = defaultNavLinks }: { links?: { label: string
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {showMenu && (
-          <div className="md:hidden fixed inset-x-0 top-[60px] bottom-0 bg-white/95 dark:bg-black/95 backdrop-blur-md z-50">
-            <div className="flex flex-col p-4 gap-4">
-              <nav className="flex flex-col space-y-2">
-                {links.map((link) => (
-                  <Button
-                    key={link.path}
-                    variant="ghost"
-                    asChild
-                    className={`px-4 py-3 rounded-lg text-base font-medium justify-start ${
-                      isActive(link.path)
-                        ? 'text-orange-600 bg-orange-50 dark:text-orange-400 dark:bg-orange-900/20'
-                        : 'text-gray-600 hover:text-orange-600 hover:bg-orange-50 dark:text-gray-400 dark:hover:text-orange-400 dark:hover:bg-orange-900/20'
-                    }`}
-                    onClick={() => setShowMenu(false)}
-                  >
-                    <Link href={link.path}>{link.label}</Link>
-                  </Button>
-                ))}
-              </nav>
-              <div className="mt-4 space-y-3">
-                <WalletButton />
-                <ClusterUiSelect />
-                <ThemeSelect />
-              </div>
-            </div>
-          </div>
-        )}
-      </header>
+        
+      </div>
     </motion.header>
   )
 }
