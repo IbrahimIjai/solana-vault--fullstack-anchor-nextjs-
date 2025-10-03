@@ -1,9 +1,6 @@
-
-
-
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useWallet } from '@solana/wallet-adapter-react'
 import { Button } from '@workspace/ui/components/button'
 import { Card, CardContent, CardHeader, CardTitle } from '@workspace/ui/components/card'
@@ -14,37 +11,51 @@ import { Label } from '@workspace/ui/components/label'
 import { Separator } from '@workspace/ui/components/separator'
 import { Wallet, Zap, Clock, CheckCircle, AlertCircle, Minus, Plus } from 'lucide-react'
 import { motion } from 'motion/react'
+import useCandyMachineV3 from '@/hooks/use-candy-v3'
+import { CANDY_MACHINE_ID } from '@/config'
+
+//www.youtube.com/watch?v=9vrZ5aWc5iE&t=287s
 export default function MinterUI() {
-    const { publicKey, connected, connect } = useWallet()
-    const [mintAmount, setMintAmount] = useState(1)
-    const [isMinting, setIsMinting] = useState(false)
-    const [mintedTokens, setMintedTokens] = useState<string[]>([])
+  const { publicKey, connected, connect } = useWallet()
+  const [mintAmount, setMintAmount] = useState(1)
+  const [isMinting, setIsMinting] = useState(false)
+  const [mintedTokens, setMintedTokens] = useState<string[]>([])
 
-    const maxMint = 10
-    const mintPrice = 0.1
-    const totalSupply = 10000
-    const minted = 2847
-    const remaining = totalSupply - minted
-    const progressPercentage = (minted / totalSupply) * 100
+  // Use existing Metaplex hook to fetch Candy Machine + Guards + Prices
+  const { candyMachine, items, prices, guardStates, status, mint } = useCandyMachineV3(CANDY_MACHINE_ID)
 
-    const handleMint = async () => {
-      if (!connected || !publicKey) {
-        await connect()
-        return
-      }
+  // Derive UI values
+  const defaultPrices = prices?.default
+  const solPrice = useMemo(() => defaultPrices?.payment?.find((p) => p.kind === 'sol')?.price ?? null, [defaultPrices])
+  const maxMint = useMemo(() => guardStates?.default?.canPayFor ?? 10, [guardStates?.default?.canPayFor])
+  const totalSupply = items?.available || 0
+  const minted = items?.redeemed || 0
+  const remaining = items?.remaining || 0
+  const progressPercentage = totalSupply ? (minted / totalSupply) * 100 : 0
 
+  const handleMint = async () => {
+    if (!connected || !publicKey) {
+      await connect()
+      return
+    }
+    if (!candyMachine) return
+    try {
       setIsMinting(true)
-      // Simulate minting process
-      setTimeout(() => {
-        const newTokens = Array.from({ length: mintAmount }, (_, i) => `#${minted + i + 1}`)
-        setMintedTokens(newTokens)
-        setIsMinting(false)
-      }, 3000)
+      const nfts = await mint(mintAmount)
+      const mintedList = nfts
+        .map((n, i) => (n && 'name' in n ? (n as any).name || `#${minted + i + 1}` : `#${minted + i + 1}`))
+        .filter(Boolean) as string[]
+      setMintedTokens(mintedList)
+    } catch (e) {
+      console.error(e)
+    } finally {
+      setIsMinting(false)
     }
+  }
 
-    const adjustMintAmount = (delta: number) => {
-      setMintAmount(Math.max(1, Math.min(maxMint, mintAmount + delta)))
-    }
+  const adjustMintAmount = (delta: number) => {
+    setMintAmount(Math.max(1, Math.min(maxMint, mintAmount + delta)))
+  }
 
   return (
     <div className="container mx-auto max-w-6xl px-4 py-12">
@@ -125,7 +136,7 @@ export default function MinterUI() {
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-muted-foreground">Price per NFT</span>
-                  <span className="font-medium">{mintPrice} SOL</span>
+                  <span className="font-medium">{solPrice !== null ? `${solPrice} SOL` : '—'}</span>
                 </div>
                 <div className="flex justify-between items-center">
                   <span className="text-sm text-muted-foreground">Quantity</span>
@@ -138,11 +149,16 @@ export default function MinterUI() {
                 <Separator />
                 <div className="flex justify-between items-center text-lg font-bold">
                   <span>Total</span>
-                  <span>{(mintPrice * mintAmount + 0.001).toFixed(3)} SOL</span>
+                  <span>{solPrice !== null ? (solPrice * mintAmount + 0.001).toFixed(3) : '—'} SOL</span>
                 </div>
               </div>
 
-              <Button onClick={handleMint} disabled={isMinting} className="w-full text-lg py-6" size="lg">
+              <Button
+                onClick={handleMint}
+                disabled={isMinting || status.minting}
+                className="w-full text-lg py-6"
+                size="lg"
+              >
                 {isMinting ? (
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary-foreground mr-2" />
@@ -152,6 +168,26 @@ export default function MinterUI() {
                   <>
                     <Wallet className="mr-2 h-5 w-5" />
                     Connect Wallet
+                  </>
+                ) : status.candyMachine ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-primary-foreground mr-2" />
+                    Loading Candy Machine...
+                  </>
+                ) : remaining <= 0 ? (
+                  <>
+                    <AlertCircle className="mr-2 h-5 w-5" />
+                    Sold Out
+                  </>
+                ) : guardStates?.default && !guardStates.default.isStarted ? (
+                  <>
+                    <Clock className="mr-2 h-5 w-5" />
+                    Not started
+                  </>
+                ) : guardStates?.default && guardStates.default.isEnded ? (
+                  <>
+                    <Clock className="mr-2 h-5 w-5" />
+                    Ended
                   </>
                 ) : (
                   <>
